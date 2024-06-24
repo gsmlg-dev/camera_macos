@@ -69,6 +69,8 @@ public class CameraMacosPlugin: NSObject, FlutterPlugin, FlutterTexture, AVCaptu
     var zoomPixelBuffer: CVImageBuffer?
     
     var orientation:CGFloat = 0
+
+    var isVideoMirrored: Bool = true
     
     init(_ registry: FlutterTextureRegistry, _ outputChannel: FlutterMethodChannel) {
         self.registry = registry
