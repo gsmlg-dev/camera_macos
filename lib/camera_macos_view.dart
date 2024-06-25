@@ -210,6 +210,7 @@ class CameraMacOSViewState extends State<CameraMacOSView> {
         oldWidget.pictureFormat != widget.pictureFormat ||
         oldWidget.usePlatformView != widget.usePlatformView ||
         oldWidget.orientation != widget.orientation ||
+        oldWidget.isVideoMirrored != widget.isVideoMirrored ||
         oldWidget.videoFormat != widget.videoFormat ||
         oldWidget.key != widget.key) {
       initializeCameraFuture = CameraMacOSPlatform.instance
@@ -225,6 +226,7 @@ class CameraMacOSViewState extends State<CameraMacOSView> {
         audioFormat: widget.audioFormat,
         toggleTorch: widget.toggleTorch,
         orientation: widget.orientation,
+        isVideoMirrored: widget.isVideoMirrored,
       )
           .then((value) {
         if (value != null) {
